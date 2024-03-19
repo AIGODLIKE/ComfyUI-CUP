@@ -1,13 +1,13 @@
-# 无限圣杯 ComfyUI 桥接器
-## 特性
-1. 为无限圣杯提供预览图支持
-2. 为无限圣杯内置节点提供图片输入/保存等服务
-3. 为无限圣杯提供变更节点信息
-## 安装
+# ComfyUI-BlenderAI-node Bridge
+## Features
+1. ComfyUI-BlenderAI-node thumbnail service(depends on ComfyUI-Studio)
+2. ComfyUI-BlenderAI-node specify InputImage/SaveImage Nodes etc.
+3. ComfyUI-BlenderAI-node node-diff/queue service.
+## Installation
 ```
 cd ComfyUI/custom_nodes
 git clone https://github.com/AIGODLIKE/ComfyUI-CUP.git
 ```
-## 注意
-1. 此仓库为无限圣杯的辅助功能，需配合[无限圣杯](https://github.com/AIGODLIKE/ComfyUI-BlenderAI-node)才能使用
-2. 此仓库并未提供ComfyUI web端兼容的 Node
+## Note
+1. This repo only used for [ComfyUI-BlenderAI-node](https://github.com/AIGODLIKE/ComfyUI-BlenderAI-node) !
+2. This repo do not provide any nodes for web-end.

@@ -406,14 +406,15 @@ class LoadImage:
 
     @classmethod
     def IS_CHANGED(s, image, mode):
-        image_path = image
-        if not os.path.exists(image_path):
-            return ""
+        if image:
+            image = image.replace("\\\\", "/").replace("\\", "/")
+        image = Path(image).name
+        image = f"SDN/{image}"
+        image_path = folder_paths.get_annotated_filepath(image)
         m = hashlib.sha256()
         with open(image_path, 'rb') as f:
             m.update(f.read())
         return m.digest().hex()
-
 
 class MatImage(LoadImage):
     @classmethod

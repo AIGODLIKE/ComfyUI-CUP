@@ -416,6 +416,47 @@ class LoadImage:
             m.update(f.read())
         return m.digest().hex()
 
+
+class PreviewAudio:
+    def __init__(self):
+        self.output_dir = folder_paths.get_output_directory()
+        self.type = "output"
+        self.prefix_append = "_temp_" + ''.join(random.choice("abcdefghijklmnopqrstupvxyz") for _ in range(5))
+        self.compress_level = 4
+
+    @classmethod
+    def INPUT_TYPES(s):
+        return {"required": {"audio": ("AUDIO", ), },
+                "hidden": {"prompt": "PROMPT", "extra_pnginfo": "EXTRA_PNGINFO"},
+                }
+
+    RETURN_TYPES = ()
+    FUNCTION = "save_audio"
+
+    OUTPUT_NODE = True
+
+    CATEGORY = CATEGORY_
+
+    def save_audio(self, audio, prompt=None, extra_pnginfo=None):
+        import torchaudio
+        filename_prefix = "audio/ComfyUI"
+        filename_prefix += self.prefix_append
+        full_output_folder, filename, counter, subfolder, filename_prefix = folder_paths.get_save_image_path(filename_prefix, self.output_dir)
+        results = list()
+        for (batch_number, waveform) in enumerate(audio["waveform"]):
+            filename_with_batch_num = filename.replace("%batch_num%", str(batch_number))
+            file = f"{filename_with_batch_num}_{counter:05}_.flac"
+            torchaudio.save(os.path.join(full_output_folder, file), waveform, audio["sample_rate"], format="FLAC")
+            results.append({
+                "filename": file,
+                "subfolder": subfolder,
+                "type": self.type
+            })
+            counter += 1
+
+        return {"ui": {"audio": results}}
+
+
 class MatImage(LoadImage):
     @classmethod
     def INPUT_TYPES(s):
@@ -609,6 +650,7 @@ NODE_CLASS_MAPPINGS = {
     "存储": SaveImage,
     # "导入": ToBlender,
     "预览": PreviewImage,
+    "PreviewAudio": PreviewAudio,
     'OpenPoseFull': OpenPoseFull,
     'OpenPoseHand': OpenPoseHand,
     'OpenPoseMediaPipeFace': OpenPoseMediaPipeFace,

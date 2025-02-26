@@ -1,0 +1,232 @@
+{
+  "DevToolsNodeWithOptionalComboInput": {
+    "description": "Узел с необязательным комбинированным вводом, который возвращает уникальные значения каждый раз, когда вызывается INPUT_TYPES",
+    "display_name": "Узел с необязательным комбинированным вводом",
+    "inputs": {
+      "optional_combo_input": {
+        "name": "optional_combo_input"
+      }
+    }
+  },
+  "Mask": {
+    "display_name": "Маска",
+    "inputs": {
+      "channel": {
+        "name": "channel"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPose": {
+    "display_name": "OpenPose",
+    "inputs": {
+      "frame": {
+        "name": "frame"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPoseCanny": {
+    "display_name": "OpenPoseCanny",
+    "inputs": {
+      "frame": {
+        "name": "frame"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPoseDepth": {
+    "display_name": "OpenPoseDepth",
+    "inputs": {
+      "frame": {
+        "name": "frame"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPoseFace": {
+    "display_name": "OpenPoseFace",
+    "inputs": {
+      "frame": {
+        "name": "frame"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPoseFull": {
+    "display_name": "OpenPoseFull",
+    "inputs": {
+      "frame": {
+        "name": "frame"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPoseFullExtraLimb": {
+    "display_name": "OpenPoseFullExtraLimb",
+    "inputs": {
+      "frame": {
+        "name": "frame"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPoseHand": {
+    "display_name": "OpenPoseHand",
+    "inputs": {
+      "frame": {
+        "name": "frame"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPoseKeyPose": {
+    "display_name": "OpenPoseKeyPose",
+    "inputs": {
+      "frame": {
+        "name": "frame"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPoseLineart": {
+    "display_name": "OpenPoseLineart",
+    "inputs": {
+      "frame": {
+        "name": "frame"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPoseMediaPipeFace": {
+    "display_name": "OpenPoseMediaPipeFace",
+    "inputs": {
+      "frame": {
+        "name": "frame"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "SaveAudioBL": {
+    "display_name": "СохранитьАудиоBL",
+    "inputs": {
+      "audio": {
+        "name": "audio"
+      }
+    }
+  },
+  "WanImageToVideo": {
+    "display_name": "WanImageToVideo",
+    "inputs": {
+      "batch_size": {
+        "name": "batch_size"
+      },
+      "clip_vision_output": {
+        "name": "clip_vision_output"
+      },
+      "height": {
+        "name": "height"
+      },
+      "length": {
+        "name": "length"
+      },
+      "negative": {
+        "name": "negative"
+      },
+      "positive": {
+        "name": "positive"
+      },
+      "start_image": {
+        "name": "start_image"
+      },
+      "vae": {
+        "name": "vae"
+      },
+      "width": {
+        "name": "width"
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "positive"
+      },
+      "1": {
+        "name": "negative"
+      },
+      "2": {
+        "name": "latent"
+      }
+    }
+  },
+  "存储": {
+    "display_name": "Сохранить",
+    "inputs": {
+      "filename_prefix": {
+        "name": "префикс_имени_файла"
+      },
+      "images": {
+        "name": "изображения"
+      },
+      "output_dir": {
+        "name": "директория_вывода"
+      }
+    }
+  },
+  "截图": {
+    "display_name": "Скриншот",
+    "inputs": {
+      "image": {
+        "name": "изображение"
+      }
+    }
+  },
+  "材质图": {
+    "display_name": "Мат Изображение",
+    "inputs": {
+      "image": {
+        "name": "изображение"
+      }
+    }
+  },
+  "输入图像": {
+    "display_name": "Входное Изображение",
+    "inputs": {
+      "image": {
+        "name": "изображение"
+      },
+      "mode": {
+        "name": "режим"
+      }
+    }
+  },
+  "预览": {
+    "display_name": "Предпросмотр",
+    "inputs": {
+      "images": {
+        "name": "изображения"
+      }
+    }
+  }
+}

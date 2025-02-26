@@ -1,0 +1,232 @@
+{
+  "DevToolsNodeWithOptionalComboInput": {
+    "display_name": "Node With Optional Combo Input",
+    "description": "A node with an optional combo input that returns unique values every time INPUT_TYPES is called",
+    "inputs": {
+      "optional_combo_input": {
+        "name": "optional_combo_input"
+      }
+    }
+  },
+  "Mask": {
+    "display_name": "Mask",
+    "inputs": {
+      "image": {
+        "name": "image"
+      },
+      "channel": {
+        "name": "channel"
+      }
+    }
+  },
+  "OpenPose": {
+    "display_name": "OpenPose",
+    "inputs": {
+      "image": {
+        "name": "image"
+      },
+      "frame": {
+        "name": "frame"
+      }
+    }
+  },
+  "OpenPoseCanny": {
+    "display_name": "OpenPoseCanny",
+    "inputs": {
+      "image": {
+        "name": "image"
+      },
+      "frame": {
+        "name": "frame"
+      }
+    }
+  },
+  "OpenPoseDepth": {
+    "display_name": "OpenPoseDepth",
+    "inputs": {
+      "image": {
+        "name": "image"
+      },
+      "frame": {
+        "name": "frame"
+      }
+    }
+  },
+  "OpenPoseFace": {
+    "display_name": "OpenPoseFace",
+    "inputs": {
+      "image": {
+        "name": "image"
+      },
+      "frame": {
+        "name": "frame"
+      }
+    }
+  },
+  "OpenPoseFull": {
+    "display_name": "OpenPoseFull",
+    "inputs": {
+      "image": {
+        "name": "image"
+      },
+      "frame": {
+        "name": "frame"
+      }
+    }
+  },
+  "OpenPoseFullExtraLimb": {
+    "display_name": "OpenPoseFullExtraLimb",
+    "inputs": {
+      "image": {
+        "name": "image"
+      },
+      "frame": {
+        "name": "frame"
+      }
+    }
+  },
+  "OpenPoseHand": {
+    "display_name": "OpenPoseHand",
+    "inputs": {
+      "image": {
+        "name": "image"
+      },
+      "frame": {
+        "name": "frame"
+      }
+    }
+  },
+  "OpenPoseKeyPose": {
+    "display_name": "OpenPoseKeyPose",
+    "inputs": {
+      "image": {
+        "name": "image"
+      },
+      "frame": {
+        "name": "frame"
+      }
+    }
+  },
+  "OpenPoseLineart": {
+    "display_name": "OpenPoseLineart",
+    "inputs": {
+      "image": {
+        "name": "image"
+      },
+      "frame": {
+        "name": "frame"
+      }
+    }
+  },
+  "OpenPoseMediaPipeFace": {
+    "display_name": "OpenPoseMediaPipeFace",
+    "inputs": {
+      "image": {
+        "name": "image"
+      },
+      "frame": {
+        "name": "frame"
+      }
+    }
+  },
+  "SaveAudioBL": {
+    "display_name": "SaveAudioBL",
+    "inputs": {
+      "audio": {
+        "name": "audio"
+      }
+    }
+  },
+  "WanImageToVideo": {
+    "display_name": "WanImageToVideo",
+    "inputs": {
+      "positive": {
+        "name": "positive"
+      },
+      "negative": {
+        "name": "negative"
+      },
+      "vae": {
+        "name": "vae"
+      },
+      "width": {
+        "name": "width"
+      },
+      "height": {
+        "name": "height"
+      },
+      "length": {
+        "name": "length"
+      },
+      "batch_size": {
+        "name": "batch_size"
+      },
+      "clip_vision_output": {
+        "name": "clip_vision_output"
+      },
+      "start_image": {
+        "name": "start_image"
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "positive"
+      },
+      "1": {
+        "name": "negative"
+      },
+      "2": {
+        "name": "latent"
+      }
+    }
+  },
+  "存储": {
+    "display_name": "Save",
+    "inputs": {
+      "images": {
+        "name": "images"
+      },
+      "filename_prefix": {
+        "name": "filename_prefix"
+      },
+      "output_dir": {
+        "name": "output_dir"
+      }
+    }
+  },
+  "截图": {
+    "display_name": "Screenshot",
+    "inputs": {
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "材质图": {
+    "display_name": "Mat Image",
+    "inputs": {
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "输入图像": {
+    "display_name": "Input Image",
+    "inputs": {
+      "image": {
+        "name": "image"
+      },
+      "mode": {
+        "name": "mode"
+      }
+    }
+  },
+  "预览": {
+    "display_name": "Preview",
+    "inputs": {
+      "images": {
+        "name": "images"
+      }
+    }
+  }
+}

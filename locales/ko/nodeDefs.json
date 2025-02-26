@@ -1,0 +1,232 @@
+{
+  "DevToolsNodeWithOptionalComboInput": {
+    "description": "INPUT_TYPES가 호출될 때마다 고유한 값을 반환하는 선택적 콤보 입력이 있는 노드",
+    "display_name": "선택적 콤보 입력이 있는 노드",
+    "inputs": {
+      "optional_combo_input": {
+        "name": "optional_combo_input"
+      }
+    }
+  },
+  "Mask": {
+    "display_name": "마스크",
+    "inputs": {
+      "channel": {
+        "name": "채널"
+      },
+      "image": {
+        "name": "이미지"
+      }
+    }
+  },
+  "OpenPose": {
+    "display_name": "OpenPose",
+    "inputs": {
+      "frame": {
+        "name": "프레임"
+      },
+      "image": {
+        "name": "이미지"
+      }
+    }
+  },
+  "OpenPoseCanny": {
+    "display_name": "OpenPoseCanny",
+    "inputs": {
+      "frame": {
+        "name": "프레임"
+      },
+      "image": {
+        "name": "이미지"
+      }
+    }
+  },
+  "OpenPoseDepth": {
+    "display_name": "OpenPoseDepth",
+    "inputs": {
+      "frame": {
+        "name": "프레임"
+      },
+      "image": {
+        "name": "이미지"
+      }
+    }
+  },
+  "OpenPoseFace": {
+    "display_name": "OpenPoseFace",
+    "inputs": {
+      "frame": {
+        "name": "프레임"
+      },
+      "image": {
+        "name": "이미지"
+      }
+    }
+  },
+  "OpenPoseFull": {
+    "display_name": "OpenPoseFull",
+    "inputs": {
+      "frame": {
+        "name": "프레임"
+      },
+      "image": {
+        "name": "이미지"
+      }
+    }
+  },
+  "OpenPoseFullExtraLimb": {
+    "display_name": "OpenPoseFullExtraLimb",
+    "inputs": {
+      "frame": {
+        "name": "프레임"
+      },
+      "image": {
+        "name": "이미지"
+      }
+    }
+  },
+  "OpenPoseHand": {
+    "display_name": "OpenPoseHand",
+    "inputs": {
+      "frame": {
+        "name": "프레임"
+      },
+      "image": {
+        "name": "이미지"
+      }
+    }
+  },
+  "OpenPoseKeyPose": {
+    "display_name": "OpenPoseKeyPose",
+    "inputs": {
+      "frame": {
+        "name": "프레임"
+      },
+      "image": {
+        "name": "이미지"
+      }
+    }
+  },
+  "OpenPoseLineart": {
+    "display_name": "OpenPoseLineart",
+    "inputs": {
+      "frame": {
+        "name": "프레임"
+      },
+      "image": {
+        "name": "이미지"
+      }
+    }
+  },
+  "OpenPoseMediaPipeFace": {
+    "display_name": "OpenPoseMediaPipeFace",
+    "inputs": {
+      "frame": {
+        "name": "프레임"
+      },
+      "image": {
+        "name": "이미지"
+      }
+    }
+  },
+  "SaveAudioBL": {
+    "display_name": "SaveAudioBL",
+    "inputs": {
+      "audio": {
+        "name": "오디오"
+      }
+    }
+  },
+  "WanImageToVideo": {
+    "display_name": "WanImageToVideo",
+    "inputs": {
+      "batch_size": {
+        "name": "배치 크기"
+      },
+      "clip_vision_output": {
+        "name": "clip_vision_output"
+      },
+      "height": {
+        "name": "높이"
+      },
+      "length": {
+        "name": "길이"
+      },
+      "negative": {
+        "name": "부정적"
+      },
+      "positive": {
+        "name": "긍정적"
+      },
+      "start_image": {
+        "name": "시작 이미지"
+      },
+      "vae": {
+        "name": "vae"
+      },
+      "width": {
+        "name": "너비"
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "긍정적"
+      },
+      "1": {
+        "name": "부정적"
+      },
+      "2": {
+        "name": "latent"
+      }
+    }
+  },
+  "存储": {
+    "display_name": "저장",
+    "inputs": {
+      "filename_prefix": {
+        "name": "파일명_접두사"
+      },
+      "images": {
+        "name": "이미지"
+      },
+      "output_dir": {
+        "name": "출력_디렉토리"
+      }
+    }
+  },
+  "截图": {
+    "display_name": "스크린샷",
+    "inputs": {
+      "image": {
+        "name": "이미지"
+      }
+    }
+  },
+  "材质图": {
+    "display_name": "Mat 이미지",
+    "inputs": {
+      "image": {
+        "name": "이미지"
+      }
+    }
+  },
+  "输入图像": {
+    "display_name": "입력 이미지",
+    "inputs": {
+      "image": {
+        "name": "이미지"
+      },
+      "mode": {
+        "name": "모드"
+      }
+    }
+  },
+  "预览": {
+    "display_name": "미리보기",
+    "inputs": {
+      "images": {
+        "name": "이미지"
+      }
+    }
+  }
+}

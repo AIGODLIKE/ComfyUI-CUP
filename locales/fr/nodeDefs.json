@@ -1,0 +1,232 @@
+{
+  "DevToolsNodeWithOptionalComboInput": {
+    "description": "Un nœud avec une entrée combo optionnelle qui renvoie des valeurs uniques chaque fois que INPUT_TYPES est appelé",
+    "display_name": "Nœud avec entrée combo optionnelle",
+    "inputs": {
+      "optional_combo_input": {
+        "name": "optional_combo_input"
+      }
+    }
+  },
+  "Mask": {
+    "display_name": "Masque",
+    "inputs": {
+      "channel": {
+        "name": "canal"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPose": {
+    "display_name": "OpenPose",
+    "inputs": {
+      "frame": {
+        "name": "cadre"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPoseCanny": {
+    "display_name": "OpenPoseCanny",
+    "inputs": {
+      "frame": {
+        "name": "cadre"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPoseDepth": {
+    "display_name": "OpenPoseDepth",
+    "inputs": {
+      "frame": {
+        "name": "cadre"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPoseFace": {
+    "display_name": "OpenPoseFace",
+    "inputs": {
+      "frame": {
+        "name": "cadre"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPoseFull": {
+    "display_name": "OpenPoseFull",
+    "inputs": {
+      "frame": {
+        "name": "cadre"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPoseFullExtraLimb": {
+    "display_name": "OpenPoseFullExtraLimb",
+    "inputs": {
+      "frame": {
+        "name": "cadre"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPoseHand": {
+    "display_name": "OpenPoseHand",
+    "inputs": {
+      "frame": {
+        "name": "cadre"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPoseKeyPose": {
+    "display_name": "OpenPoseKeyPose",
+    "inputs": {
+      "frame": {
+        "name": "cadre"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPoseLineart": {
+    "display_name": "OpenPoseLineart",
+    "inputs": {
+      "frame": {
+        "name": "cadre"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPoseMediaPipeFace": {
+    "display_name": "OpenPoseMediaPipeFace",
+    "inputs": {
+      "frame": {
+        "name": "cadre"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "SaveAudioBL": {
+    "display_name": "EnregistrerAudioBL",
+    "inputs": {
+      "audio": {
+        "name": "audio"
+      }
+    }
+  },
+  "WanImageToVideo": {
+    "display_name": "WanImageVersVidéo",
+    "inputs": {
+      "batch_size": {
+        "name": "taille_lot"
+      },
+      "clip_vision_output": {
+        "name": "sortie_vision_clip"
+      },
+      "height": {
+        "name": "hauteur"
+      },
+      "length": {
+        "name": "longueur"
+      },
+      "negative": {
+        "name": "négatif"
+      },
+      "positive": {
+        "name": "positive"
+      },
+      "start_image": {
+        "name": "image_départ"
+      },
+      "vae": {
+        "name": "vae"
+      },
+      "width": {
+        "name": "largeur"
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "positive"
+      },
+      "1": {
+        "name": "négatif"
+      },
+      "2": {
+        "name": "latent"
+      }
+    }
+  },
+  "存储": {
+    "display_name": "Sauvegarder",
+    "inputs": {
+      "filename_prefix": {
+        "name": "préfixe_de_nom_de_fichier"
+      },
+      "images": {
+        "name": "images"
+      },
+      "output_dir": {
+        "name": "répertoire_de_sortie"
+      }
+    }
+  },
+  "截图": {
+    "display_name": "Capture d'écran",
+    "inputs": {
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "材质图": {
+    "display_name": "Image de Mat",
+    "inputs": {
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "输入图像": {
+    "display_name": "Image d'entrée",
+    "inputs": {
+      "image": {
+        "name": "image"
+      },
+      "mode": {
+        "name": "mode"
+      }
+    }
+  },
+  "预览": {
+    "display_name": "Aperçu",
+    "inputs": {
+      "images": {
+        "name": "images"
+      }
+    }
+  }
+}

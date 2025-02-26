@@ -1,0 +1,232 @@
+{
+  "DevToolsNodeWithOptionalComboInput": {
+    "description": "一个具有可选组合输入的节点，每次调用INPUT_TYPES时都返回唯一的值",
+    "display_name": "具有可选组合输入的节点",
+    "inputs": {
+      "optional_combo_input": {
+        "name": "可选组合输入"
+      }
+    }
+  },
+  "Mask": {
+    "display_name": "遮罩",
+    "inputs": {
+      "channel": {
+        "name": "通道"
+      },
+      "image": {
+        "name": "图像"
+      }
+    }
+  },
+  "OpenPose": {
+    "display_name": "OpenPose",
+    "inputs": {
+      "frame": {
+        "name": "帧"
+      },
+      "image": {
+        "name": "图像"
+      }
+    }
+  },
+  "OpenPoseCanny": {
+    "display_name": "OpenPoseCanny",
+    "inputs": {
+      "frame": {
+        "name": "帧"
+      },
+      "image": {
+        "name": "图像"
+      }
+    }
+  },
+  "OpenPoseDepth": {
+    "display_name": "OpenPoseDepth",
+    "inputs": {
+      "frame": {
+        "name": "帧"
+      },
+      "image": {
+        "name": "图像"
+      }
+    }
+  },
+  "OpenPoseFace": {
+    "display_name": "OpenPoseFace",
+    "inputs": {
+      "frame": {
+        "name": "帧"
+      },
+      "image": {
+        "name": "图像"
+      }
+    }
+  },
+  "OpenPoseFull": {
+    "display_name": "OpenPoseFull",
+    "inputs": {
+      "frame": {
+        "name": "帧"
+      },
+      "image": {
+        "name": "图像"
+      }
+    }
+  },
+  "OpenPoseFullExtraLimb": {
+    "display_name": "OpenPoseFullExtraLimb",
+    "inputs": {
+      "frame": {
+        "name": "帧"
+      },
+      "image": {
+        "name": "图像"
+      }
+    }
+  },
+  "OpenPoseHand": {
+    "display_name": "OpenPoseHand",
+    "inputs": {
+      "frame": {
+        "name": "帧"
+      },
+      "image": {
+        "name": "图像"
+      }
+    }
+  },
+  "OpenPoseKeyPose": {
+    "display_name": "OpenPoseKeyPose",
+    "inputs": {
+      "frame": {
+        "name": "帧"
+      },
+      "image": {
+        "name": "图像"
+      }
+    }
+  },
+  "OpenPoseLineart": {
+    "display_name": "OpenPoseLineart",
+    "inputs": {
+      "frame": {
+        "name": "帧"
+      },
+      "image": {
+        "name": "图像"
+      }
+    }
+  },
+  "OpenPoseMediaPipeFace": {
+    "display_name": "OpenPoseMediaPipeFace",
+    "inputs": {
+      "frame": {
+        "name": "帧"
+      },
+      "image": {
+        "name": "图像"
+      }
+    }
+  },
+  "SaveAudioBL": {
+    "display_name": "保存音频BL",
+    "inputs": {
+      "audio": {
+        "name": "音频"
+      }
+    }
+  },
+  "WanImageToVideo": {
+    "display_name": "WanImageToVideo",
+    "inputs": {
+      "batch_size": {
+        "name": "批量大小"
+      },
+      "clip_vision_output": {
+        "name": "clip视觉输出"
+      },
+      "height": {
+        "name": "高度"
+      },
+      "length": {
+        "name": "长度"
+      },
+      "negative": {
+        "name": "负面"
+      },
+      "positive": {
+        "name": "正面"
+      },
+      "start_image": {
+        "name": "开始图像"
+      },
+      "vae": {
+        "name": "vae"
+      },
+      "width": {
+        "name": "宽度"
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "正面"
+      },
+      "1": {
+        "name": "负面"
+      },
+      "2": {
+        "name": "潜在"
+      }
+    }
+  },
+  "存储": {
+    "display_name": "保存",
+    "inputs": {
+      "filename_prefix": {
+        "name": "文件名前缀"
+      },
+      "images": {
+        "name": "图像"
+      },
+      "output_dir": {
+        "name": "输出目录"
+      }
+    }
+  },
+  "截图": {
+    "display_name": "截图",
+    "inputs": {
+      "image": {
+        "name": "图像"
+      }
+    }
+  },
+  "材质图": {
+    "display_name": "材质图像",
+    "inputs": {
+      "image": {
+        "name": "图像"
+      }
+    }
+  },
+  "输入图像": {
+    "display_name": "输入图像",
+    "inputs": {
+      "image": {
+        "name": "图像"
+      },
+      "mode": {
+        "name": "模式"
+      }
+    }
+  },
+  "预览": {
+    "display_name": "预览",
+    "inputs": {
+      "images": {
+        "name": "图像"
+      }
+    }
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "DevToolsNodeWithOptionalComboInput": {
+    "description": "INPUT_TYPESが呼び出されるたびにユニークな値を返すオプションのコンボ入力を持つノード",
+    "display_name": "オプションのコンボ入力を持つノード",
+    "inputs": {
+      "optional_combo_input": {
+        "name": "optional_combo_input"
+      }
+    }
+  },
+  "Mask": {
+    "display_name": "マスク",
+    "inputs": {
+      "channel": {
+        "name": "channel"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPose": {
+    "display_name": "OpenPose",
+    "inputs": {
+      "frame": {
+        "name": "frame"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPoseCanny": {
+    "display_name": "OpenPoseCanny",
+    "inputs": {
+      "frame": {
+        "name": "frame"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPoseDepth": {
+    "display_name": "OpenPoseDepth",
+    "inputs": {
+      "frame": {
+        "name": "frame"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPoseFace": {
+    "display_name": "OpenPoseFace",
+    "inputs": {
+      "frame": {
+        "name": "frame"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPoseFull": {
+    "display_name": "OpenPoseFull",
+    "inputs": {
+      "frame": {
+        "name": "frame"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPoseFullExtraLimb": {
+    "display_name": "OpenPoseFullExtraLimb",
+    "inputs": {
+      "frame": {
+        "name": "frame"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPoseHand": {
+    "display_name": "OpenPoseHand",
+    "inputs": {
+      "frame": {
+        "name": "frame"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPoseKeyPose": {
+    "display_name": "OpenPoseKeyPose",
+    "inputs": {
+      "frame": {
+        "name": "frame"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPoseLineart": {
+    "display_name": "OpenPoseLineart",
+    "inputs": {
+      "frame": {
+        "name": "frame"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "OpenPoseMediaPipeFace": {
+    "display_name": "OpenPoseMediaPipeFace",
+    "inputs": {
+      "frame": {
+        "name": "frame"
+      },
+      "image": {
+        "name": "image"
+      }
+    }
+  },
+  "SaveAudioBL": {
+    "display_name": "SaveAudioBL",
+    "inputs": {
+      "audio": {
+        "name": "audio"
+      }
+    }
+  },
+  "WanImageToVideo": {
+    "display_name": "WanImageToVideo",
+    "inputs": {
+      "batch_size": {
+        "name": "batch_size"
+      },
+      "clip_vision_output": {
+        "name": "clip_vision_output"
+      },
+      "height": {
+        "name": "height"
+      },
+      "length": {
+        "name": "length"
+      },
+      "negative": {
+        "name": "negative"
+      },
+      "positive": {
+        "name": "positive"
+      },
+      "start_image": {
+        "name": "start_image"
+      },
+      "vae": {
+        "name": "vae"
+      },
+      "width": {
+        "name": "width"
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "positive"
+      },
+      "1": {
+        "name": "negative"
+      },
+      "2": {
+        "name": "latent"
+      }
+    }
+  },
+  "存储": {
+    "display_name": "保存",
+    "inputs": {
+      "filename_prefix": {
+        "name": "ファイル名のプレフィックス"
+      },
+      "images": {
+        "name": "画像"
+      },
+      "output_dir": {
+        "name": "出力ディレクトリ"
+      }
+    }
+  },
+  "截图": {
+    "display_name": "スクリーンショット",
+    "inputs": {
+      "image": {
+        "name": "画像"
+      }
+    }
+  },
+  "材质图": {
+    "display_name": "マット画像",
+    "inputs": {
+      "image": {
+        "name": "画像"
+      }
+    }
+  },
+  "输入图像": {
+    "display_name": "入力画像",
+    "inputs": {
+      "image": {
+        "name": "画像"
+      },
+      "mode": {
+        "name": "モード"
+      }
+    }
+  },
+  "预览": {
+    "display_name": "プレビュー",
+    "inputs": {
+      "images": {
+        "name": "画像"
+      }
+    }
+  }
+}

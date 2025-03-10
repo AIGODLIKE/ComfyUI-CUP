@@ -333,6 +333,10 @@ class PreviewImage(SaveImage):
                 }
 
 
+class CupException(Exception):
+    pass
+
+
 class LoadImage:
     @classmethod
     def INPUT_TYPES(s):
@@ -349,11 +353,25 @@ class LoadImage:
     FUNCTION = "load_image"
 
     def load_image(self, image, mode=None):
+        if not image:
+            raise CupException({
+                "type": "sdn_no_image_provided",
+                "message": "No Image Provided",
+                "details": "",
+                "extra_info": {}
+            })
         if image:
             image = image.replace("\\\\", "/").replace("\\", "/")
         image = Path(image).name
         image = f"SDN/{image}"
         image_path = folder_paths.get_annotated_filepath(image)
+        if not Path(image_path).exists():
+            raise CupException({
+                "type": "sdn_image_not_found",
+                "message": "Image Not Found",
+                "details": Path(image_path).as_posix(),
+                "extra_info": {}
+            })
         # image_path = image
         img = Image.open(image_path)
         output_images = []

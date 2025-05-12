@@ -131,10 +131,15 @@ async def clear_cache(request):
 
 @server.PromptServer.instance.routes.post("/cup/clear_vram")
 async def clearn_vram(request):
-    gc.collect()
-    unload_all_models()
-    soft_empty_cache()
-
+    try:
+        gc.collect()
+        unload_all_models()
+        soft_empty_cache()
+    except Exception as e:
+        sys.stdout.write("Clear VRAM Error")
+        sys.stdout.write(str(e))
+        sys.stdout.flush()
+    return web.Response(status=200)
 
 def node_info(node_class):
     """

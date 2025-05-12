@@ -18,6 +18,7 @@ import time
 import asyncio
 import logging as logger
 from comfy.cli_args import args
+from comfy.model_management import unload_all_models, soft_empty_cache
 from threading import Thread
 from aiohttp import web
 from pathlib import Path
@@ -126,6 +127,13 @@ async def clear_cache(request):
         ob.outputs_ui.clear()
         ob.old_prompt.clear()
     return web.Response(status=200)
+
+
+@server.PromptServer.instance.routes.post("/cup/clear_vram")
+async def clearn_vram(request):
+    gc.collect()
+    unload_all_models()
+    soft_empty_cache()
 
 
 def node_info(node_class):

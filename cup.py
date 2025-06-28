@@ -18,7 +18,12 @@ import time
 import asyncio
 import logging as logger
 from comfy.cli_args import args
-from comfy.model_management import unload_all_models, soft_empty_cache
+from comfy.comfy_types import IO
+try:
+    from comfy.model_management import unload_all_models, soft_empty_cache
+except ImportError:
+    unload_all_models = lambda: None
+    soft_empty_cache = lambda: None
 from threading import Thread
 from aiohttp import web
 from pathlib import Path
@@ -488,6 +493,33 @@ class SaveAudio:
         return {"ui": {"audio": results}}
 
 
+class SaveModel:
+    @classmethod
+    def INPUT_TYPES(s):
+        return {
+            "required": {
+                "model": (
+                    IO.STRING,
+                    {
+                        "default": None,
+                        "tooltip": "模型.",
+                    },
+                ),
+            },
+            "hidden": {"prompt": "PROMPT", "extra_pnginfo": "EXTRA_PNGINFO"},
+        }
+
+    RETURN_TYPES = ()
+    FUNCTION = "save"
+
+    OUTPUT_NODE = True
+
+    CATEGORY = CATEGORY_
+
+    def save(self, model, prompt=None, extra_pnginfo=None):
+        return {"ui": {"result": [model]}}
+
+
 class PreviewAudio:
     def __init__(self):
         self.output_dir = folder_paths.get_output_directory()
@@ -722,6 +754,7 @@ NODE_CLASS_MAPPINGS = {
     # "导入": ToBlender,
     "预览": PreviewImage,
     "SaveAudioBL": SaveAudio,
+    "SaveModel": SaveModel,
     "PreviewAudio": PreviewAudio,
     'OpenPoseFull': OpenPoseFull,
     'OpenPoseHand': OpenPoseHand,

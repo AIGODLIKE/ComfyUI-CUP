@@ -20,7 +20,7 @@ import logging as logger
 from comfy.cli_args import args
 try:
     from comfy.comfy_types import IO
-except ImportError:
+except (ImportError, ModuleNotFoundError):
     class IO:
         STRING = "STRING"
 try:

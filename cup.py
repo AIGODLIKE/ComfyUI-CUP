@@ -18,7 +18,11 @@ import time
 import asyncio
 import logging as logger
 from comfy.cli_args import args
-from comfy.comfy_types import IO
+try:
+    from comfy.comfy_types import IO
+except ImportError:
+    class IO:
+        STRING = "STRING"
 try:
     from comfy.model_management import unload_all_models, soft_empty_cache
 except ImportError:

@@ -16,8 +16,9 @@ import folder_paths
 import nodes
 import time
 import asyncio
-import logging as logger
+import logging
 from comfy.cli_args import args
+from comfy.model_management import unload_all_models, soft_empty_cache
 try:
     from comfy.comfy_types import IO
 except (ImportError, ModuleNotFoundError):
@@ -28,7 +29,7 @@ try:
 except ImportError:
     unload_all_models = lambda: None
     soft_empty_cache = lambda: None
-from threading import Thread
+from threading import Thread, Lock
 from aiohttp import web
 from pathlib import Path
 from PIL import Image, ImageOps, ImageSequence
@@ -38,7 +39,7 @@ FORCE_LOG = False
 CATEGORY_ = "Blender"
 TEMPDIR = Path(__file__).parent.parent.parent / "SDNodeTemp"
 HOST_PATH = Path("XXXHOST-PATHXXX")
-if not HOST_PATH.parent.exists():
+if not HOST_PATH.exists():
     HOST_PATH = Path(__file__).parent
 
 
@@ -181,6 +182,7 @@ class NodeCacheManager:
         self.cached_nodes = {}
         self.diff = {}
         self.filter_node = {"Note", "PrimitiveNode", "Cache Node"}
+        self._lock = Lock()
 
     def calc_diff(self):
         if self.diff:
@@ -191,7 +193,8 @@ class NodeCacheManager:
                 continue
             ni = node_info(x)
             if x not in self.cached_nodes or self.cached_nodes[x] != ni:
-                self.diff[x] = ni
+                with self._lock:
+                    self.diff[x] = ni
             self.cached_nodes[x] = ni
         return self.diff
 
@@ -203,19 +206,19 @@ class NodeCacheManager:
         self.calc_diff()
         diff = self.diff
         if remote:
-            diff = deepcopy(self.diff)
-            self.diff.clear()
+            with self._lock:
+                diff = deepcopy(self.diff)
+                self.diff.clear()
         else:
             try:
                 # 本地部署时写入差异后清理
                 diff_path = HOST_PATH.joinpath("diff_object_info.json")
                 with diff_path.open("w", encoding="utf-8") as f:
                     f.write(json.dumps(self.diff))
-                self.diff.clear()
+                with self._lock:
+                    self.diff.clear()
             except Exception as e:
-                # 写入失败后
-                # print(f"Failed to write diff: {e}")
-                ...
+                logging.info(f"ComfyUI-CUP write diff: {e}")
         return diff
 
 
